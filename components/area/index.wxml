@@ -1,0 +1,9 @@
+<view class="section">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker" wx:if="{{multiIndex.length!=0}}">
+      {{multiArray[0][multiIndex[0]]}},
+      {{multiArray[1][multiIndex[1]]}}市
+    </view>
+    <input type="text" placeholder="请选择您所在的城市" wx:if="{{multiIndex.length==0}}"/>
+  </picker>
+</view>
